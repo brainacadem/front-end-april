@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My personal page!</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Hello</h1>
+		<p>Welcome on <strong>Anton Chichik</strong> page</p>
+		<p><img src="http://g-ecx.images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg"/></p>
+		<br>
+		<P>On this page you can find a lot of interesting infomation about me!</P>
+		<hr>
+		</div>
+	<div align="center">
+		<h2>About me!</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut metus sit amet libero consectetur venenatis nec vitae sem. Sed vulputate ligula nec nisl tempus, et vestibulum enim lacinia. Nulla aliquet facilisis lobortis. Nunc feugiat pretium dolor vitae fringilla. Nunc viverra sapien quis neque condimentum interdum. Duis laoreet enim diam, id finibus erat pulvinar non. Morbi elementum auctor dui et interdum.</p>
+		<p>Suspendisse pulvinar nisi in ligula placerat, eget bibendum dolor ornare. Nullam finibus feugiat est, at facilisis risus pulvinar a. Integer auctor ornare hendrerit. Quisque semper venenatis enim id volutpat. Nunc pulvinar imperdiet nibh, sed porta dui ultricies vitae. Donec porttitor lectus quis mi elementum, quis tristique nisi placerat. Maecenas vestibulum sapien ac est pulvinar, id faucibus nunc tincidunt. Fusce posuere ipsum ut est sodales, nec dapibus augue condimentum. Donec vel sodales libero, sed pharetra urna. Nulla vitae ornare tortor, non ornare sem. Morbi malesuada quam id varius egestas. Pellentesque sodales, nunc quis rhoncus venenatis, tortor metus iaculis sem, in aliquet mi ipsum vel eros. Suspendisse ullamcorper volutpat velit eu dictum. Sed porta fermentum porta.</p>
+		<p>Nunc pellentesque malesuada tortor. Integer vitae quam ut turpis pellentesque pellentesque. Phasellus eget tristique leo. Nunc tincidunt magna eu eleifend gravida. Duis augue est, tincidunt ut rutrum eu, auctor quis metus. Maecenas mi ipsum, fermentum in cursus id, pellentesque vel tortor. Fusce libero magna, iaculis sed posuere at, faucibus quis dolor. Ut feugiat elementum euismod. Donec ac eleifend dui. Donec eu ipsum felis. Aliquam lobortis aliquam tellus, tristique congue eros convallis ut. Donec tristique est vitae maximus convallis. In hac habitasse platea dictumst. Sed interdum dictum arcu, et eleifend ipsum fermentum ut.</p>
+	</div>
+	<div>
+		<table border="1">
+		<th>Contact with me by social media!</th>
+		<th>Or send me a message from my page! But dont forget about leave your email!</th>	
+		<tr>
+			<td>
+				<ul>
+					<li><a href="https://vk.com/feed">Vk</a></li>
+					<li><a href="facebook.com">Facebook</a></li>
+					<li><a href="github.com">GitHub</a></li>
+					<li><a href="https://twitter.com">Twitter</a></li>
+				</ul>
+
+			</td>
+			<td>
+				<label for="pole1">Email</label>
+				<input type="text" name="pole" id="pole1" value="Enter you email!"> 
+				<br><hr>
+				<label for="pole2">Message</label>
+				<textarea  id="pole2" rows="10" cols="25">Enter a message</textarea>
+				<br><hr>
+				<input type="checkbox" name="check" id="pole3">
+				<label for="pole3">I agree with rules!</label> 
+				<br><hr>
+				<input type="button" value="Send a message">
+			</td>
+		</tr>
+		<tr><td></td></tr>
+ 	</table>
+	</body>
+</html>
