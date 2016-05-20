@@ -262,3 +262,91 @@ div.author{
 	text-align: right;
 	line-height: 15px;
 }
+
+/* contact page */
+.content-wrap {
+	width: 673px;
+	float: left;
+}
+.contact-wrapper {
+	width: 650px;
+	background: white;
+	border: 1px solid #ededed;
+	padding: 10px;
+}
+.contact-wrapper p {
+	font-weight: bold;
+}
+.small-wrap {
+	width: 615px;
+	background: white;
+	border: 1px solid #ededed;
+	padding: 10px;
+}
+.small-wrap p {
+	font-weight: bold;
+}
+.contact-form {
+	width: 560px;
+	margin-top: 10px;
+}
+.contact-form label {
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.contact-form label:before {
+	content: "Add your info";
+	display: block;
+	position: absolute;
+	font-size: 10px;
+	font-weight: initial;
+	top:20px;
+}
+.contact-form label:after {
+	content: '*';
+}
+.contact-form input {
+	width: 420px;
+}
+.big-field {
+	height: 300px;
+	vertical-align: top;
+}
+.relative {
+	position: relative;
+}
+.contact-aside {
+	float: left;
+	width: 240px;
+	padding: 5px;
+	margin-left: 10px;
+}
+.aside-content {
+	background: white;
+	border: 1px solid #ededed;
+	padding: 5px;
+	color: gray;
+}
+.lorem-div {
+	padding: 10px;
+	border-bottom: 1px solid #ededed;
+}
+.info-div {
+	padding: 10px;
+	font-weight: bold;
+	border-bottom: 1px solid #ededed;
+}
+.info-div p {
+	margin: 0;
+	padding: 0;
+}
+.twit-div {
+	padding: 10px;
+}
+.twit-div img {
+	width: 100%;
+}
