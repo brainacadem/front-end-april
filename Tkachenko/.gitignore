@@ -3,6 +3,6 @@
 /**/bower_components
 /**/app/css/font-awesome.vendor.css
 /**/app/css/normalize.vendor.css
-/**/*.psd
-/**/*.png
+/*/*.psd
+/*/*.png
 npm-debug.log
