@@ -12,12 +12,16 @@
         padding: 2.200em 12.500em 4.000em;
     }
 
+    &__list__link,
     &__question {
-        float: left;
-        margin-top: 0.2em;
         font: 1.250em "Lato";
         text-transform: uppercase;
         color: #95badf;
+    }
+
+    &__question {
+        float: left;
+        margin-top: 0.2em;
     }
 
     &__list {
@@ -39,50 +43,49 @@
             top: 42px;
         }
 
+        &:after,
         &:before {
             content: "";
             position: absolute;
+            right: 2.500em;
+            @include respond(1200, 4801) {
+                right: 12.500em;
+            }
+        }
+
+        &:before {
             top: -16px;
-            right: 12.500em;
             z-index: 2;
-            @include triangle(2.000em, #cbe0f4, up);
+            @include triangle(1.500em, #cbe0f4, up);
             @include respond(320, 768) {
                 top: -9px;
-                right: 2.500em;
-                @include triangle(1.500em, #cbe0f4, up);
             }
             @include respond(768, 1200) {
                 top: -10px;
-                right: 2.500em;
-                @include triangle(1.500em, #cbe0f4, up);
+            }
+            @include respond(1200, 4801) {
+                 @include triangle(2.000em, #cbe0f4, up);
             }
         }
 
         &:after {
-            content: "";
-            position: absolute;
             top: -17px;
-            right: 12.500em;
             z-index: 1;
-            @include triangle(2.000em, #aac8e4, up);
+            @include triangle(1.500em, #aac8e4, up);
             @include respond(320, 768) {
                 top: -10px;
-                right: 2.500em;
-                @include triangle(1.500em, #aac8e4, up);
             }
             @include respond(768, 1200) {
                 top: -11px;
-                right: 2.500em;
-                @include triangle(1.500em, #aac8e4, up);
+            }
+            @include respond(1200, 4801) {
+                 @include triangle(2.000em, #aac8e4, up);
             }
         }
 
         &__link {
             padding-left: 0.400em;
-            font: 1.250em "Lato";
             line-height: 86.5px;
-            text-transform: uppercase;
-            color: #95badf;
             @include respond(320, 836) {
                 line-height: 1.250em;
 

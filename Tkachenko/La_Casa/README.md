@@ -1,4 +1,4 @@
-It's adaptable adaptive site.
+It's adaptable site.
 
 Building:
 
