@@ -8,27 +8,26 @@ body {
 	padding: 30px; /* Поля вокруг текста */
 	margin: 0;
 	text-align: right;
-	background-repeat:no-repeat;
-	background-position: 10%; 25px
 }
 
-.ul {
+.nav li {
 	display: inline;
 	margin-right: 5px;
 	padding: 3px;
 	font-size: 20px;
 	font-weight: bold;
+	
 }
 
-.a {
-	color: white; /* Цвет текста */
+.nav a {
 	text-decoration: none;
-	display: inline;
+	color: white;
+
 }
 
 .logo {
 	float: left;
-	margin: 20px;
+	margin: -100px 0 0 0;
 	padding: 25px 150px;
 }
 
@@ -36,6 +35,22 @@ body {
 #main {
 	width: 80%;
 	padding: 20px;
-	margin: 0 auto;
+	margin: -20px auto;
 	background-color: white;
+}
+
+h1 {
+	margin: -15px 0 5px 0 ;
+	
+}
+
+.content {
+	display: block;
+	width: 60%;
+	border: 4px double gray;
+
+}
+
+.post-holder {
+	padding: 10px auto;
 }
