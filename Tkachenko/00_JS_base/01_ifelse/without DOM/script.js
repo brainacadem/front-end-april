@@ -176,7 +176,7 @@ task10(-3);
 console.log('Task 11');
 
 function task11(a) {
-    var output = (a === 'test') ? 'Верно!' : 'Неверно!';
+    var output = ((a === 'test') && (typeof a === 'string' )) ? 'Верно!' : 'Неверно!';
     console.log(output);
 }
 
