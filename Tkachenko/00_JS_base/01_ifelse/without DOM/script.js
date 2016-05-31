@@ -189,7 +189,7 @@ task11(3);
 console.log('Task 12');
 
 function task12(a) {
-    var output = (a === '1') ? 'Верно!' : 'Неверно!';
+    var output = ((a === '1') && (typeof a === 'string')) ? 'Верно!' : 'Неверно!';
     console.log(output);
 }
 
