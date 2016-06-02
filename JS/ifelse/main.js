@@ -207,3 +207,5 @@ if (a > 0 && a < 5) {
 } else {
 	console.log(a + 5);
 }
+
+// task 17
