@@ -125,7 +125,7 @@ function task10() {
 
 function task11() {
     var a = document.getElementById('task11_1').value;
-    var output = (a === 'test') ? 'Верно!' : 'Неверно!';
+    var output = ((a === '1') && (typeof a === 'string')) ? 'Верно!' : 'Неверно!';
     document.getElementById('task11_ta').innerHTML = output;
 }
 
@@ -133,7 +133,7 @@ function task11() {
 
 function task12() {
     var a = document.getElementById('task12_1').value;
-    var output = (a === '1') ? 'Верно!' : 'Неверно!';
+    var output = ((a === '1') && (typeof a === 'string')) ? 'Верно!' : 'Неверно!';
     document.getElementById('task12_ta').innerHTML = output;
 }
 
@@ -141,7 +141,7 @@ function task12() {
 
 function task13() {
     var test = document.getElementById('task13_1').value;
-    var output = (test == 'true') ? 'Верно!' : 'Неверно!';
+    var output = test ? 'Верно!' : 'Неверно!';
     document.getElementById('task13_ta').innerHTML = output;
 }
 
@@ -149,7 +149,7 @@ function task13() {
 
 function task14() {
     var test = document.getElementById('task14_1').value;
-    var output = (test != 'true') ? 'Верно!' : 'Неверно!';
+    var output = test ? 'Неверно!' : 'Верно!';
     document.getElementById('task14_ta').innerHTML = output;
 }
 
