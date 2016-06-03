@@ -212,7 +212,7 @@ task13(false);
 console.log('Task 14');
 
 function task14(test) {
-    var output = test ? 'Неверно!' : 'Верно!';
+    var output = !test ? 'Неверно!' : 'Верно!';
     console.log(output);
 }
 task14(true);
