@@ -60,10 +60,18 @@ function getFirstElements(array, n) {
       return void 0;  
     if (n == null)   
       return array[array.length - 1];  
-    if (n < 0)  
-      return [];  
-    return array;
+    var
+      newArr = [],
+      start = n >= array.length ? 0 : array.length - n;
+
+    for (var i = start; i < array.length; i++) {
+      newArr.push(array[i])
     }
+
+    return newArr;
+  }
  console.log(getLastElements([7, 9, 0, -2]));
  console.log(getLastElements([7, 9, 0, -2],3));
  console.log(getLastElements([7, 9, 0, -2],6));
+
+ // 5. Write a simple JavaScript program to join all elements of the following array into a string.
