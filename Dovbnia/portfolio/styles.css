@@ -1,0 +1,56 @@
+body {
+	background-color: rgb(249,246,234);
+	padding: 0;
+	margin: 0;
+}
+.nav {
+	background: rgb(21,61,62);
+	padding: 30px; /* Поля вокруг текста */
+	margin: 0;
+	text-align: right;
+}
+
+.nav li {
+	display: inline;
+	margin-right: 5px;
+	padding: 3px;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+
+.nav a {
+	text-decoration: none;
+	color: white;
+
+}
+
+.logo {
+	float: left;
+	margin: -100px 0 0 0;
+	padding: 25px 150px;
+}
+
+/*main*/
+#main {
+	width: 80%;
+	padding: 20px;
+	margin: -20px auto;
+	background-color: white;
+}
+
+h1 {
+	margin: -15px 0 5px 0 ;
+	
+}
+
+.content {
+	display: block;
+	width: 60%;
+	border: 4px double gray;
+
+}
+
+.post-holder {
+	padding: 10px auto;
+}
