@@ -136,3 +136,23 @@ var result = mostFrequent(arr1);
 console.log("" + result[0] + "(" + result[1] + " times)");
 
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character.
+function swapLetter(string) {
+    var CAPS  = "ABC";
+    var LOWER = "abc";
+    var isCaps, isLower, result = '';
+    for (var i = 0; i <= string.length; i++) {
+        isCaps  = CAPS.indexOf(string[i]) > -1;
+        isLover = LOWER.indexOf(string[i]) > -1;
+console.log(string[i],isCaps,isLower);
+        if (isCaps) {
+            result += LOWER.charAt(i);
+        } else if (isLower) {
+            result += CAPS.charAt(i);
+        } else {
+            result += string.charAt(i);
+        }
+    }
+
+    return result;
+};
+console.log(swapLetter("The Quick Brown Fox"));
