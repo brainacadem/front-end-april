@@ -135,7 +135,7 @@ a[href] {
 #back-to-top.show {
     opacity: 1;
 }
-.container {
+.wrapper {
     width: 98%;
     @include respond-to(992) {
         width: 970px;

@@ -3,11 +3,7 @@ main {
     width: 97.25%;
     padding: 2.000em 2.063em 0;
     background-color: white;
-    @include respond-to(320) {
-        width: 100%;
-        padding: 1.000em;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         width: 100%;
         padding: 1.000em;
     }
@@ -86,12 +82,11 @@ main {
     font-weight: 900;
     color: $darkGreen;
     cursor: pointer;
-    @include respond-to(480) {
+    @include respond(480, 992) {
         background-color: transparent;
     }
     @include respond-to(768) {
         top: 60px;
-        background-color: transparent;
     }
 }
 #arrowLeft {
@@ -167,10 +162,7 @@ main {
     width: 74%;
     display: inline-block;
     margin-top: 1.375em;
-    @include respond-to(320) {
-        width: 100%;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         width: 100%;
     }
 }
@@ -181,10 +173,7 @@ section {
             width: 34%;
             display: inline-block;
             margin-right: 1em;
-            @include respond-to(320) {
-                display: none;
-            }
-            @include respond-to(480) {
+            @include respond(320, 768) {
                 display: none;
             }
         }
@@ -193,10 +182,7 @@ section {
         width: 62%;
         vertical-align: top;
         display: inline-block;
-        @include respond-to(320) {
-            width: 100%;
-        }
-        @include respond-to(480) {
+        @include respond(320, 768) {
             width: 100%;
         }
         data {
@@ -249,11 +235,7 @@ section {
     display: inherit;
     margin-bottom: 4.375em;
     vertical-align: top;
-    @include respond-to(320) {
-        width: 100%;
-        display: block;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         width: 100%;
         display: block;
     }
@@ -281,11 +263,7 @@ section {
 .MoreVideos {
     width: 34%;
     display: inherit;
-    @include respond-to(320) {
-        width: 100%;
-        display: block;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         width: 100%;
         display: block;
     }
@@ -293,10 +271,7 @@ section {
         width: 134.5%;
         margin-bottom: 4.375em;
     }
-    @include respond-to(992) {
-        padding-left: 1.255em;
-    }
-    @include respond-to(1200) {
+    @include respond(1200, 4801) {
         padding-left: 1.255em;
     }
     & > h3 {
@@ -335,11 +310,7 @@ section {
     display: inline-block;
     padding: 1.938em 0 0 1.625em;
     vertical-align: top;
-    @include respond-to(320) {
-        width: 100%;
-        padding: 0;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         width: 100%;
         padding: 0;
     }
@@ -348,12 +319,7 @@ section {
     }
     img {
         width: 100%;
-        @include respond-to(320) {
-            margin: auto auto auto 1em;
-            display: inline-block;
-            width: 25%;
-        }
-        @include respond-to(480) {
+        @include respond(320, 768) {
             margin: auto auto auto 1em;
             display: inline-block;
             width: 25%;
@@ -370,10 +336,7 @@ section {
     }
     img:nth-of-type(1),
     img:nth-of-type(2) {
-        @include respond-to(320) {
-            margin: 1em 1em auto auto;
-        }
-        @include respond-to(480) {
+        @include respond(320, 768) {
             margin: 1em 1em auto auto;
         }
     }
@@ -381,28 +344,19 @@ section {
         @extend h6:nth-of-type(1);
     }
     article {
-        @include respond-to(320) {
+        @include respond(320, 768) {
             display: inline-block;
             vertical-align: top;
             margin-top: 1.000em;
             width: 70%;
         }
-        @include respond-to(480) {
-            display: inline-block;
-            vertical-align: top;
-            margin-top: 1em;
-            width: 70%;
-        }
         h6 {
             & > a {
-                @include respond-to(320) {
+                @include respond(320, 992) {
                     font-size: 1.250em;
                 }
                 @include respond-to(480) {
                     font-size: 1.500em;
-                }
-                @include respond-to(768) {
-                    font-size: 1.250em;
                 }
             }
         }
@@ -413,28 +367,19 @@ section {
         }
     }
     h3:nth-of-type(1) {
-        @include respond-to(320) {
-            margin-top: 1.500em;
-        }
-        @include respond-to(480) {
+        @include respond(320, 768) {
             margin-top: 1.500em;
         }
     }
     h3:nth-of-type(2) {
         margin-top: 3.3em;
         display: none;
-        @include respond-to(992) {
-            display: block;
-        }
-        @include respond-to(1200) {
+        @include respond(992, 4801) {
             display: block;
         }
     }
     h3:nth-of-type(3) {
-        @include respond-to(320) {
-            margin-top: 1.000em;
-        }
-        @include respond-to(480) {
+        @include respond(320, 768) {
             margin-top: 1.000em;
         }
     }
@@ -443,10 +388,7 @@ section {
         color: $postAndInterrogation;
         width: 100%;
         display: none;
-        @include respond-to(992) {
-            display: block;
-        }
-        @include respond-to(1200) {
+        @include respond(992, 4801) {
             display: block;
         }
         p {
@@ -500,13 +442,7 @@ section {
         -webkit-box-shadow: inset 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: inset 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
         box-shadow: inset 1px 1px 5px -2px rgba(0, 0, 0, 0.75);
-        @include respond-to(320) {
-            width: 40%;
-            display: inline-block;
-            vertical-align: top;
-            margin-bottom: 1.500em;
-        }
-        @include respond-to(480) {
+        @include respond(320, 768) {
             width: 40%;
             display: inline-block;
             vertical-align: top;
@@ -534,10 +470,7 @@ section {
         }
     }
     .asideBottomSocialIcon {
-        @include respond-to(320) {
-            display: none;
-        }
-        @include respond-to(480) {
+        @include respond(320, 768) {
             display: none;
         }
     }

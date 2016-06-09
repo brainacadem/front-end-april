@@ -12,17 +12,10 @@
   border-bottom-left-radius: 4px;
   box-shadow: 0 4px 7px 0 #7b4c24;
   background: url("../img/backgroundMenuNew.png") repeat-x;
-  @include respond-to(320) {
+  @include respond(320, 768) {
     display: none;
   }
-  @include respond-to(480) {
-    display: none;
-  }
-  @include respond-to(768) {
-    height: 90px;
-    padding: 1.000em 0 0;
-  }
-  @include respond-to(992) {
+  @include respond(768, 1200) {
     height: 90px;
     padding: 1.000em 0 0;
   }
