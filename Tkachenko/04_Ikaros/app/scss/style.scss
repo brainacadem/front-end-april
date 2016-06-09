@@ -2,10 +2,18 @@
 @import "mixins/media";
 @import "fonts";
 
+$brandcolor: #3a3d40;
+$brandcolor__hover: #35373a;
+$brandcolor__line: #4a4d50;
+$footerbottom: #2f3235;
+$footerform: #2d3032;
+$links: #90b2c8;
+
 * {
     position: relative;
     margin: 0 auto;
     box-sizing: border-box;
+    color: #555555;
 }
 
 html {
@@ -27,13 +35,11 @@ html {
 }
 
 h1 {
-
+    font: 1.000em allerbold;
 }
 
 h2 {
-
-}
-
+    }
 
 a {
     color: inherit;
@@ -50,12 +56,23 @@ ul {
     list-style: none;
 }
 
+li {
+  display: inline-block;
+}
+
 img {
     max-width: 100%;
 }
 
 .wrapper {
-    width: 100%;
+    width: 1500px;
+    border: 0.001em solid red;
+}
+
+#footer,
+#header,
+main {
+    padding: 0 16.875em;
 }
 
 #back-to-top {
@@ -68,7 +85,7 @@ img {
     vertical-align: middle;
     border: 0;
     border-radius: 0.500em;
-    background: #4d97e1;
+    background: $brandcolor;
     transition: opacity 0.2s ease-out;
     font-size: 3.000em;
     text-align: center;
@@ -77,7 +94,7 @@ img {
 }
 
 #back-to-top:hover {
-    background: #488dd3;
+    background: $brandcolor__hover;
 }
 
 #back-to-top.show {
