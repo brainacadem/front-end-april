@@ -115,16 +115,11 @@ a[href] {
     background: $lightGreen;
     transition: opacity 0.2s ease-out;
     font-size: 3.000em;
-    // line-height: 1.500em;
     text-align: center;
     color: white;
     opacity: 0;
     cursor: pointer;
-    @include respond-to(320) {
-        background: transparent;
-        color: $lightGreen;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         background: transparent;
         color: $lightGreen;
     }
@@ -144,15 +139,12 @@ a[href] {
         width: 1018px;
     }
 }
-.mobileSearch {
+.mobilesearch {
     top: 0;
     position: absolute;
     display: none;
     z-index: 99999;
-    @include respond-to(320) {
-        display: block;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         display: block;
     }
     input[type=search] {
