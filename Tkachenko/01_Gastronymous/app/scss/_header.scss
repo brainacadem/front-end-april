@@ -2,10 +2,7 @@
 
 #header {
   margin-bottom: 2.000em;
-  @include respond-to(320) {
-    margin-bottom: 1.000em;
-  }
-  @include respond-to(480) {
+  @include respond(320, 768) {
     margin-bottom: 1.000em;
   }
   & > * {

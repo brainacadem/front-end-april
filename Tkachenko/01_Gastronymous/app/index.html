@@ -24,14 +24,14 @@
 
     <body>
 
-        <form class="mobileSearch">
+        <form class="mobilesearch">
             <input type="search">
         </form>
 
-        <div class="burgerMenu">
-            <input type="checkbox" name="main-nav" id="main-nav" class="burger-check">
-            <label for="main-nav" class="burger menu"><span></span></label>
-            <ul>
+        <div class="burgermenu">
+            <input type="checkbox" name="main-nav" id="main-nav" class="burgermenu__check">
+            <label for="main-nav" class="burgermenu__label menu"><span></span></label>
+            <ul class="burgermenu__list">
                 <li><a href="#">Gastro slot</a></li>
                 <li><a href="#">Dinner club</a></li>
                 <li><a href="#">Food tracker tracking</a></li>
@@ -48,7 +48,7 @@
 
         <a href="#" id="back-to-top" title="Back to top" class="fa fa-angle-double-up"></a>
 
-        <div class="container">
+        <div class="wrapper">
 
             <!--HEADER-->
             <header id="header">
@@ -76,28 +76,28 @@
 
             <!--NAV-->
             <nav class="nav">
-                <div class="radiusLeft"></div>
-                <div class="radiusRight"></div>
-                <menu>
-                    <li onclick="location.href='https://www.dartlang.org/';"><span>Gastro</span><span>slot</span></li>
-                    <li onclick="location.href='#';"><span>dinner</span><span>club</span></li>
-                    <li onclick="location.href='#';"><span>food tracker</span><span>tracking</span></li>
-                    <li onclick="location.href='#';"><span>restaurant</span><span>search</span></li>
-                    <li onclick="location.href='#';"><span>menu</span><span>mix</span></li>
-                    <li onclick="location.href='#';"><span>street</span><span>walker</span></li>
-                </menu>
+                <div class="nav__radius nav__radius--left"></div>
+                <div class="nav__radius nav__radius--right"></div>
+                <ul class="nav__ul">
+                    <li onclick="location.href='#';" class="nav__ul__li"><span>Gastro</span><span>slot</span></li>
+                    <li onclick="location.href='#';" class="nav__ul__li"><span>dinner</span><span>club</span></li>
+                    <li onclick="location.href='#';" class="nav__ul__li"><span>food tracker</span><span>tracking</span></li>
+                    <li onclick="location.href='#';" class="nav__ul__li"><span>restaurant</span><span>search</span></li>
+                    <li onclick="location.href='#';" class="nav__ul__li"><span>menu</span><span>mix</span></li>
+                    <li onclick="location.href='#';" class="nav__ul__li"><span>street</span><span>walker</span></li>
+                </ul>
             </nav>
 
             <!--MAIN-->
             <main>
-                <div>
-                    <div class="circle">
-                        <p>garry parkers
-                            <br><span>restaurants</span></p>
-                        <hr>
-                        <span>The bloodied bodies lay <br> stuffed and tangled in the <br> back.</span>
+                <div class="slidercontainer">
+                    <div class="slidercontainer__circle">
+                        <p class="slidercontainer__circle__header">garry parkers
+                            <br><span class="slidercontainer__circle__header--bottom">restaurants</span></p>
+                        <hr class="slidercontainer__circle__line">
+                        <span class="slidercontainer__circle__text">The bloodied bodies lay <br> stuffed and tangled in the <br> back.</span>
                     </div>
-                    <div id="arrowLeft" onclick="slideshow.move(-1)"><span class="fa fa-angle-left fa-2x"></span></div>
+                    <span id="arrowLeft" class="fa fa-angle-left fa-2x" onclick="slideshow.move(-1)"></span>
                     <div id="slider">
                         <ul>
                             <li><img src="img\slider1.png" alt="holl" /></li>
@@ -106,7 +106,7 @@
                             <li><img src="img\slider4.png" alt="holl" /></li>
                         </ul>
                     </div>
-                    <div id="arrowRight" onclick="slideshow.move(1)"><span class="fa fa-angle-right fa-2x"></span></div>
+                    <span id="arrowRight" class="fa fa-angle-right fa-2x" onclick="slideshow.move(1)"></span>
                     <ul id="pagination" class="pagination">
                         <li onclick="slideshow.pos(0)"></li>
                         <li onclick="slideshow.pos(1)"></li>
@@ -131,7 +131,7 @@
                         <a href="#"><img src="img\img12.png" alt="img12"></a>
                         <a href="#"><img src="img\img13.png" alt="img13"></a>
                     </div>
-                    <section>
+                    <section class="section">
                         <h3>latest news<a href="#" class="moreBesideHead-up">more news</a></h3>
                         <article>
                             <img src="img\article1.png" alt="article1">

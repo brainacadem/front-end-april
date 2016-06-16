@@ -6,27 +6,14 @@
   margin-bottom: 3.750em;
   background: url("../img/backgroundFooter.png") repeat;
   text-align: center;
-  @include respond-to(320) {
+  @include respond(320, 768) {
     width:  100%;
     padding: .500em;
     margin-bottom: 1.000em;
   }
   @include respond-to(480) {
-    width:  100%;
     padding: 1.000em;
-    margin-bottom: 1.000em;
   }
-  // фигня все это...дизайнера мне сюда...минут на 5....
-  //   &:before {
-  //     @extend %contentAbsolute;
-  //     width: 100%;
-  //     height: 30%;
-  //     bottom: 0;
-  //     left: 0;
-  //     display: block;
-  //     background-color: #b0b0b0;
-  //     opacity: .44;
-  //   }
 
   & > div {
     display: inline-block;
@@ -65,10 +52,7 @@
       ul {
         li:nth-last-of-type(-n+2) {
           display: none;
-          @include respond-to(320) {
-            display: inline-block;
-          }
-          @include respond-to(480) {
+          @include respond(320, 768) {
             display: inline-block;
           }
         }
@@ -76,20 +60,14 @@
     }
 
     &:nth-of-type(4) {
-      @include respond-to(320) {
-        display: none;
-      }
-      @include respond-to(480) {
+      @include respond(320, 768) {
         display: none;
       }
     }
 
     &:not(:nth-of-type(1)) {
       width: 19%;
-      @include respond-to(320) {
-        width: 30%;
-      }
-      @include respond-to(480) {
+      @include respond(320, 768) {
         width: 30%;
       }
     }
@@ -102,10 +80,7 @@
       text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.3);
       text-align: center;
       line-height: 1.417em;
-      @include respond-to(320) {
-        margin-left: 0;
-      }
-      @include respond-to(480) {
+      @include respond(320, 768) {
         margin-left: 0;
       }
     }

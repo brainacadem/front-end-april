@@ -1,19 +1,16 @@
 //main: style.scss
 
-.burgerMenu {
+.burgermenu {
   width: 100%;
   top: 25px;
   position: fixed;
   z-index: 99999;
   display: none;
-  @include respond-to(320) {
-    display: block;
-  }
-  @include respond-to(480) {
+  @include respond(320, 768) {
     display: block;
   }
 
-  ul {
+  &__list {
     position: relative;
     float: left;
     width: 100%;
@@ -59,11 +56,11 @@
   }
 }
 
-.burger-check {
+.burgermenu__check {
   display: none;
 }
 
-.burger {
+.burgermenu__label {
   float: left;
   margin-left: 10px;
   height: 60px;
@@ -107,27 +104,27 @@
   }
 }
 
-.burger span:after .burger-check:checked + .burger:after {
-  content: '';
+.burgermenu__label span:after .burgermenu__check:checked + .burgermenu__label:after {
+  content: "";
 }
 
-.burger-check:checked + .burger span {
+.burgermenu__check:checked + .burgermenu__label span {
   height: 0;
   width: 0;
 }
 
-.burger-check:checked + .burger span:after,
-.burger-check:checked + .burger span:before {
+.burgermenu__check:checked + .burgermenu__label span:after,
+.burgermenu__check:checked + .burgermenu__label span:before {
   top: 6px;
 }
 
-.burger-check:checked + .burger span:before {
+.burgermenu__check:checked + .burgermenu__label span:before {
   -webkit-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
-.burger-check:checked + .burger span:after {
+.burgermenu__check:checked + .burgermenu__label span:after {
   -webkit-transform: rotate(-225deg);
   -ms-transform: rotate(225deg);
   transform: rotate(-225deg);
