@@ -86,3 +86,76 @@ h1 {
 #title.miss:after {
 	box-shadow: inset 0 0 10px 5px rgba(255, 0, 0, 0.3);
 }
+.popup-holder {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: rgba(255,255,255,0.8);
+	transition: all 1s;
+}
+.popup-holder.accepted {
+	opacity: 0;
+	z-index: -1;
+}
+.login-form {
+	padding: 15px;
+	background: #eee;
+	border: 2px solid #000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
+	line-height: 24px;
+
+}
+.login-form form {
+	margin: 0;
+}
+ .row {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.row > label {
+	float: left;
+	width: 100px;
+}
+.row > input {
+	display: block;
+	overflow: hidden;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 3px 7px;
+	border: none;
+}
+*:before,
+*:after {
+	display: table;
+	content: '';
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input[type="submit"] {
+	display: block;
+	width: 100px;
+	background: green;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+	line-height: 18px;
+	padding: 10px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	margin: 0;
+	outline: none;
+
+}
