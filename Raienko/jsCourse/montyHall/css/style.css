@@ -1,0 +1,11 @@
+* {
+	font-family: Arial;
+	text-align: center;
+}
+.doors-holder {
+	display: inline-block;
+}
+.door {
+	width: 100px;
+	height: 100px;
+}
