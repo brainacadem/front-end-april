@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phone book</title>
+</head>
+<style>
+    *,
+    *::before,
+    *::after {
+        margin: 0 auto;
+        box-sizing: border-box;
+        font-size: 1.200em;
+        outline: none;
+    }
+
+    p {
+        background: gray;
+    }
+
+    #phonebook {
+        background: lightgray;
+    }
+
+    p,
+    #phonebook,
+    #phonebook__form,
+    #phonebook__result {
+        padding: .500em;
+    }
+
+    #phonebook,
+    p {
+        margin: 1.000em;
+        border: .010em solid indigo;
+    }
+
+    #phonebook__form,
+    #phonebook__result {
+        display: inline-block;
+        width: calc(100%/2 - .200em);
+        border: .010em solid blue;
+    }
+
+    #phonebook__result td {
+        width: 1%;
+        font-size: .500em;
+        border: .010em solid blue;
+        text-align: center;
+    }
+
+    #phonebook__result {
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+
+
+
+    <p>Написать телефонную книгу. phone-book.js – здесь будет ваш код. В нём 2 метода, которые вы должны реализовать: add(name, phone, email) – добавляет запись в телефонную книгу, если какое-либо из полей не валидно, то запись не добавляется; remove(query)
+        – удаляет запись из телефонной книги по запросу; search(string) - поиск по имени контакта reset() - сбросить поиск</p>
+
+    <div id="phonebook">
+        <form id="phonebook__form" novalidate>
+            <div id="phonebook__form__adder">
+                <input type="text" name="inputname" placeholder="Enter a name...">
+                <input type="tel" name="inputtel" placeholder="Enter a phone...">
+                <input type="email" name="inputemail" placeholder="Enter an email...">
+                <input type="button" name="inputbutton" value="Add contact">
+            </div>
+        </form>
+        <table id="phonebook__result">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Phone</td>
+                    <td>Email</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+
+
+    <script src="phone-book.js">
+    </script>
+</body>
+
+</html>
