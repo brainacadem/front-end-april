@@ -1,92 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Phone book</title>
-</head>
-<style>
-    *,
-    *::before,
-    *::after {
-        margin: 0 auto;
-        box-sizing: border-box;
-        font-size: 1.200em;
-        outline: none;
-    }
+    <head>
+        <meta charset="UTF-8">
+        <title>Phone book</title>
+    </head>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-size: 1.200em;
+            outline: none;
+        }
 
-    p {
-        background: gray;
-    }
+        p {
+            background: gray;
+        }
 
-    #phonebook {
-        background: lightgray;
-    }
+        input {
+            width: 100%;
+            margin: .020em auto .020em auto;
+            padding: .020em;
+        }
 
-    p,
-    #phonebook,
-    #phonebook__form,
-    #phonebook__result {
-        padding: .500em;
-    }
+        thead> tr> td {
+            font-weight: bold;
+            background: LightSkyBlue;
+            color: MidnightBlue;
+        }
 
-    #phonebook,
-    p {
-        margin: 1.000em;
-        border: .010em solid indigo;
-    }
+        #phonebook {
+            background: lightgray;
+        }
 
-    #phonebook__form,
-    #phonebook__result {
-        display: inline-block;
-        width: calc(100%/2 - .200em);
-        border: .010em solid blue;
-    }
+        p,
+        #phonebook,
+        #phonebook__form,
+        #phonebook__result {
+            padding: .500em;
+        }
 
-    #phonebook__result td {
-        width: 1%;
-        font-size: .500em;
-        border: .010em solid blue;
-        text-align: center;
-    }
+        #phonebook,
+        p {
+            margin: 1.000em;
+            border: .010em solid indigo;
+        }
 
-    #phonebook__result {
-        border-collapse: collapse;
-    }
-</style>
+        #phonebook__form,
+        #phonebook__result,
+        #search> * {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100%/2 - .200em);
+        }
 
-<body>
+        #phonebook__result td {
+            width: 1%;
+            font-size: .500em;
+            border: .010em solid blue;
+            text-align: center;
+        }
+
+        #phonebook__result {
+            border-collapse: collapse;
+        }
+    </style>
+
+    <body>
+
+        <p>Написать телефонную книгу. phone-book.js – здесь будет ваш код. В нём 2 метода,
+            которые вы должны реализовать: add(name, phone, email) – добавляет запись
+            в телефонную книгу, если какое-либо из полей не валидно, то запись не
+            добавляется; remove(query) – удаляет запись из телефонной книги по запросу;
+            search(string) - поиск по имени контакта reset() - сбросить поиск</p>
+
+        <div id="phonebook">
+            <form id="search">
+                <input type="search" id="inputSearch" placeholder="What are you looking for? .." style="width: 74%;">
+                <input type="button" id="buttonReset" value="Reset" style="width: 24%;" disabled>
+            </form>
+            <form id="phonebook__form" novalidate>
+                <div id="phonebook__form__adder">
+                    <input type="text" id="inputName" placeholder="Enter a name..." autocomplete="off">
+                    <input type="tel" id="inputTel" placeholder="Enter a phone..." disabled autocomplete="off">
+                    <input type="email" id="inputEmail" placeholder="Enter an email..." disabled autocomplete="off">
+                    <input type="button" id="buttonAdd" value="Add contact" disabled>
+                </div>
+            </form>
+            <table id="phonebook__result">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Email</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
 
 
-
-    <p>Написать телефонную книгу. phone-book.js – здесь будет ваш код. В нём 2 метода, которые вы должны реализовать: add(name, phone, email) – добавляет запись в телефонную книгу, если какое-либо из полей не валидно, то запись не добавляется; remove(query)
-        – удаляет запись из телефонной книги по запросу; search(string) - поиск по имени контакта reset() - сбросить поиск</p>
-
-    <div id="phonebook">
-        <form id="phonebook__form" novalidate>
-            <div id="phonebook__form__adder">
-                <input type="text" name="inputname" placeholder="Enter a name...">
-                <input type="tel" name="inputtel" placeholder="Enter a phone...">
-                <input type="email" name="inputemail" placeholder="Enter an email...">
-                <input type="button" name="inputbutton" value="Add contact">
-            </div>
-        </form>
-        <table id="phonebook__result">
-            <thead>
-                <tr>
-                    <td>Name</td>
-                    <td>Phone</td>
-                    <td>Email</td>
-                    <td>Action</td>
-                </tr>
-            </thead>
-            <tbody id="tbody"></tbody>
-        </table>
-    </div>
-
-
-    <script src="phone-book.js">
-    </script>
-</body>
+        <script src="phone-book.js">
+        </script>
+    </body>
 
 </html>
