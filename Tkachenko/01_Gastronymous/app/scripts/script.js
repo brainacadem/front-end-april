@@ -18,7 +18,7 @@
 
 if ($('#back-to-top').length) {
   var scrollTrigger = 100, // px
-    backToTop = function() {
+    back-to-top = function() {
       var scrollTop = $(window).scrollTop();
       if (scrollTop > scrollTrigger) {
         $('#back-to-top').addClass('show');
@@ -26,9 +26,9 @@ if ($('#back-to-top').length) {
         $('#back-to-top').removeClass('show');
       }
     };
-  backToTop();
+  back-to-top();
   $(window).on('scroll', function() {
-    backToTop();
+    back-to-top();
   });
   $('#back-to-top').on('click', function(e) {
     e.preventDefault();
