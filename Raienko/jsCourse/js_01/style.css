@@ -1,8 +1,0 @@
-#pascal-triangle tr {
-  display: block;
-  text-align: center;
-}
-#pascal-triangle td {
-  display: inline-block;
-  margin: 5px;
-}
