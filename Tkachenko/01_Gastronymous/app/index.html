@@ -19,6 +19,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
         <link rel="stylesheet" href="css/vendor.min.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
         <link rel="stylesheet" href="css/style.min.css">
     </head>
 
@@ -90,30 +92,26 @@
 
             <!--MAIN-->
             <main>
-                <div class="slidercontainer">
-                    <div class="slidercontainer__circle">
-                        <p class="slidercontainer__circle__header">garry parkers
-                            <br><span class="slidercontainer__circle__header--bottom">restaurants</span></p>
-                        <hr class="slidercontainer__circle__line">
-                        <span class="slidercontainer__circle__text">The bloodied bodies lay <br> stuffed and tangled in the <br> back.</span>
-                    </div>
-                    <span id="arrowLeft" class="fa fa-angle-left fa-2x" onclick="slideshow.move(-1)"></span>
-                    <div id="slider">
-                        <ul>
-                            <li><img src="img\slider1.png" alt="holl" /></li>
-                            <li><img src="img\slider2.png" alt="holl" /></li>
-                            <li><img src="img\slider3.png" alt="holl" /></li>
-                            <li><img src="img\slider4.png" alt="holl" /></li>
-                        </ul>
-                    </div>
-                    <span id="arrowRight" class="fa fa-angle-right fa-2x" onclick="slideshow.move(1)"></span>
-                    <ul id="pagination" class="pagination">
-                        <li onclick="slideshow.pos(0)"></li>
-                        <li onclick="slideshow.pos(1)"></li>
-                        <li onclick="slideshow.pos(2)"></li>
-                        <li onclick="slideshow.pos(3)"></li>
-                    </ul>
+              <div class="slidercontainer">
+
+                <div class="slidercontainer__circle">
+                  <p class="slidercontainer__circle__header">garry parkers
+                      <br><span class="slidercontainer__circle__header--bottom">restaurants</span></p>
+                  <hr class="slidercontainer__circle__line">
+                  <span class="slidercontainer__circle__text">The bloodied bodies lay <br> stuffed and tangled in the <br> back.</span>
+              </div>
+
+                <div class="slidercontainer__slick">
+
+                    <div class="slidercontainer__slide"><img src="img\slider1.png" alt="holl"></div>
+                    <div class="slidercontainer__slide"><img src="img\slider2.png" alt="holl"></div>
+                    <div class="slidercontainer__slide"><img src="img\slider3.png" alt="holl"></div>
+                    <div class="slidercontainer__slide"><img src="img\slider4.png" alt="holl"></div>
+
                 </div>
+              </div>
+
+
                 <div class="oppositeAside">
                     <div class="oneWeekInPictures">
                         <h3>One week in pictures<a href="#" class="moreBesideHead-up">more pictures</a></h3>
@@ -198,8 +196,8 @@
                     <div class="latestVideo">
                         <h3>latest video</h3>
                         <div class="video-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MVoK7g_DcVs?list=PLPedo-T7QiNt_i-CNGzkKLgp9McLg1fNp"
-                                frameborder="0" allowfullscreen></iframe>
+                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/OLjyCy-7U2U"
+                                frameborder="0" allowfullscreen></iframe> -->
                         </div>
                     </div>
                     <div class="MoreVideos">
@@ -310,22 +308,13 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script src="scripts/script.min.js"></script>
+        <script src="scripts/slick.min.js"></script>
         <script>
-            var slideshow = new TINY.slider.slide('slideshow', {
-                id: 'slider',
-                auto: false, // false для отключения анимации или число секунд между сменой слайдов
-                resume: false, // продолжение автослайдирования после приостановки
-                vertical: false, //вертикальное слайдирование
-                navid: 'pagination', // Id UL нумерации страниц
-                activeclass: 'current', // активный класс нумерации страниц
-                position: 0, //индекс начальной позиции
-                rewind: false, //выключает автоперемотку, если true – автослайдирование
-                elastic: true, // переключение эффекта "дрожания"  слайдов (проход своего места и возврат на место)
-                left: 'arrowLeft', // ID левой навигационной стрелки, для отмены выбора курсором
-                right: 'arrowRight' // ID правой навигационной стрелки, для отмены выбора курсором
+            $('.slidercontainer__slick').slick({
+              autoplay: true
             });
         </script>
+        <script src="scripts/script.min.js"></script>
 
     </body>
 

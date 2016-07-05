@@ -517,15 +517,12 @@ main {
   height: 12em;
   position: absolute;
   display: none;
-  top: 18px;
-  left: 391px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 900;
   padding-top: 2.813em;
   border-radius: 6em;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#9bdcd2), to(#b7e8e0));
-  background-image: -webkit-linear-gradient(bottom, #9bdcd2 0%, #b7e8e0 100%);
-  background-image: -moz-linear-gradient(bottom, #9bdcd2 0%, #b7e8e0 100%);
-  background-image: -o-linear-gradient(bottom, #9bdcd2 0%, #b7e8e0 100%);
   background-image: linear-gradient(to top, #9bdcd2 0%, #b7e8e0 100%);
   text-align: center; }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
@@ -557,67 +554,6 @@ main {
 .fa-angle-left.fa-2x,
 .fa-angle-right.fa-2x {
   font-size: 1.5em; }
-
-#arrowLeft,
-#arrowRight {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  padding: 1.5px 10px 0;
-  top: 80px;
-  border-radius: 15px;
-  background-color: white;
-  font-weight: 900;
-  color: #278f7f;
-  cursor: pointer; }
-  @media only screen and (min-width: 480px) and (max-width: 991px) {
-    #arrowLeft,
-    #arrowRight {
-      background-color: transparent; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    #arrowLeft,
-    #arrowRight {
-      top: 60px; } }
-
-#arrowLeft {
-  left: -50px;
-  text-align: left; }
-
-#arrowRight {
-  top: 89px;
-  right: -50px;
-  text-align: right; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    #arrowRight {
-      top: 69px; } }
-
-#slider {
-  float: left;
-  overflow: auto;
-  width: 934px;
-  height: 230px; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    #slider {
-      width: 230px;
-      height: 130px; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    #slider {
-      width: 340px;
-      height: 140px; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    #slider {
-      width: 588px;
-      height: 145px; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    #slider {
-      width: 771px;
-      height: 190px; } }
-  #slider ul {
-    position: absolute;
-    list-style: none;
-    padding-left: 0; }
-  #slider li {
-    float: left; }
 
 .pagination {
   list-style: none; }

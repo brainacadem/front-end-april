@@ -19,15 +19,12 @@ main {
         height: 12em;
         position: absolute;
         display: none;
-        top: 18px;
-        left: 391px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 900;
         padding-top: 2.813em;
         border-radius: 6em;
-        background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(155, 220, 210)), to(rgb(183, 232, 224)));
-        background-image: -webkit-linear-gradient(bottom, rgb(155, 220, 210) 0%, rgb(183, 232, 224) 100%);
-        background-image: -moz-linear-gradient(bottom, rgb(155, 220, 210) 0%, rgb(183, 232, 224) 100%);
-        background-image: -o-linear-gradient(bottom, rgb(155, 220, 210) 0%, rgb(183, 232, 224) 100%);
         background-image: linear-gradient(to top, rgb(155, 220, 210) 0%, rgb(183, 232, 224) 100%);
         text-align: center;
         @include respond-to(1200) {
@@ -75,72 +72,72 @@ main {
     font-size: 1.5em;
 }
 
-#arrowLeft,
-#arrowRight {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    padding: 1.5px 10px 0;
-    top: 80px;
-    border-radius: 15px;
-    background-color: white;
-    font-weight: 900;
-    color: $darkGreen;
-    cursor: pointer;
-    @include respond(480, 992) {
-        background-color: transparent;
-    }
-    @include respond-to(768) {
-        top: 60px;
-    }
-}
-
-#arrowLeft {
-    left: -50px;
-    text-align: left;
-}
-
-#arrowRight {
-    top: 89px;
-    right: -50px;
-    text-align: right;
-    @include respond-to(768) {
-        top: 69px;
-    }
-}
-
-#slider {
-    float: left;
-    overflow: auto;
-    width: 934px;
-    height: 230px;
-    @include respond-to(320) {
-        width: 230px;
-        height: 130px;
-    }
-    @include respond-to(480) {
-        width: 340px;
-        height: 140px;
-    }
-    @include respond-to(768) {
-        width: 588px;
-        height: 145px;
-    }
-    @include respond-to(992) {
-        width: 771px;
-        height: 190px;
-    }
-
-    ul {
-        position: absolute;
-        list-style: none;
-        padding-left: 0;
-    }
-
-    li {
-        float: left;
-    }
-}
+// #arrowLeft,
+// #arrowRight {
+//     width: 30px;
+//     height: 30px;
+//     position: absolute;
+//     padding: 1.5px 10px 0;
+//     top: 80px;
+//     border-radius: 15px;
+//     background-color: white;
+//     font-weight: 900;
+//     color: $darkGreen;
+//     cursor: pointer;
+//     @include respond(480, 992) {
+//         background-color: transparent;
+//     }
+//     @include respond-to(768) {
+//         top: 60px;
+//     }
+// // }
+//
+// #arrowLeft {
+//     left: -50px;
+//     text-align: left;
+// }
+//
+// #arrowRight {
+//     top: 89px;
+//     right: -50px;
+//     text-align: right;
+//     @include respond-to(768) {
+//         top: 69px;
+//     }
+// }
+//
+// #slider {
+//     float: left;
+//     overflow: auto;
+//     width: 934px;
+//     height: 230px;
+//     @include respond-to(320) {
+//         width: 230px;
+//         height: 130px;
+//     }
+//     @include respond-to(480) {
+//         width: 340px;
+//         height: 140px;
+//     }
+//     @include respond-to(768) {
+//         width: 588px;
+//         height: 145px;
+//     }
+//     @include respond-to(992) {
+//         width: 771px;
+//         height: 190px;
+//     }
+//
+//     ul {
+//         position: absolute;
+//         list-style: none;
+//         padding-left: 0;
+//     }
+//
+//     li {
+//         float: left;
+//     }
+// }
 
 .pagination {
     list-style: none;
