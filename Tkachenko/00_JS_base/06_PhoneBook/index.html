@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Phone book</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     </head>
     <style>
         *,
@@ -16,23 +17,17 @@
         }
 
         p {
-            background: gray;
-        }
-
-        input {
-            width: 100%;
-            margin: .020em auto .020em auto;
-            padding: .020em;
+            background: #727272;
         }
 
         thead> tr> td {
             font-weight: bold;
-            background: LightSkyBlue;
+            background: #3498DB;
             color: MidnightBlue;
         }
 
         #phonebook {
-            background: lightgray;
+            background: #B6B6B6;
         }
 
         p,
@@ -45,7 +40,7 @@
         #phonebook,
         p {
             margin: 1.000em;
-            border: .010em solid indigo;
+            border-radius: 4px;
         }
 
         #phonebook__form,
@@ -70,7 +65,7 @@
 
     <body>
 
-        <p>Написать телефонную книгу. phone-book.js – здесь будет ваш код. В нём 2 метода,
+        <p style="font-size: 1.000em;">Написать телефонную книгу. phone-book.js – здесь будет ваш код. В нём 2 метода,
             которые вы должны реализовать: add(name, phone, email) – добавляет запись
             в телефонную книгу, если какое-либо из полей не валидно, то запись не
             добавляется; remove(query) – удаляет запись из телефонной книги по запросу;
@@ -78,15 +73,15 @@
 
         <div id="phonebook">
             <form id="search">
-                <input type="search" id="inputSearch" placeholder="What are you looking for? .." style="width: 74%;">
-                <input type="button" id="buttonReset" value="Reset" style="width: 24%;" disabled>
+                <input type="search" id="inputSearch" placeholder="What are you looking for? .." style="width: 74%;" class="form-control">
+                <input type="button" id="buttonReset" value="Reset" style="width: 24%;" class="btn btn-success" disabled>
             </form>
             <form id="phonebook__form" novalidate>
                 <div id="phonebook__form__adder">
-                    <input type="text" id="inputName" placeholder="Enter a name..." autocomplete="off">
-                    <input type="tel" id="inputTel" placeholder="Enter a phone..." disabled autocomplete="off">
-                    <input type="email" id="inputEmail" placeholder="Enter an email..." disabled autocomplete="off">
-                    <input type="button" id="buttonAdd" value="Add contact" disabled>
+                    <input type="text" id="inputName" placeholder="Enter a name..." autocomplete="off" class="form-control">
+                    <input type="tel" id="inputTel" placeholder="Enter a phone..." disabled autocomplete="off" class="form-control">
+                    <input type="email" id="inputEmail" placeholder="Enter an email..." disabled autocomplete="off" class="form-control">
+                    <input type="button" id="buttonAdd" value="Add contact" class="btn btn-success" disabled>
                 </div>
             </form>
             <table id="phonebook__result">

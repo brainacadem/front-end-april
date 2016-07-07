@@ -29,14 +29,6 @@ var phonebook = {
                 newTr = document.createElement('tr') /*новая строка*/ ,
                 newTd /*новая ячейка*/ ;
 
-            // /*Создание массива значений и обнуление value в input*/
-            // for (let i = 0; i < phonebook.arrInputId2.length - 1; i++) {
-            //     arrInputValue[i] = phonebook.arrInputId2[i].value;
-            //     phonebook.arrInputId2[i].value = '';
-            //     phonebook.arrInputId2[i].style.borderColor = 'transparent';
-            // } /*Конец создания массива значений и обнуления value в input*/
-
-
             /*Создание новой строки и ее заполнение*/
             tbody.appendChild(newTr);
             newTr.id = 'row__' + phonebook.counter;
@@ -51,12 +43,14 @@ var phonebook = {
 
             newTd = document.createElement('td');
             newTr.appendChild(newTd);
-            newTd.innerHTML = '<input type="button" id="remove__' + phonebook.counter++ + '" onclick="phonebook.removeContact()" value="Remove"></input>';
+            newTd.innerHTML = '<input type="button" id="remove__' + phonebook.counter++ + '" onclick="phonebook.removeContact()" value="Remove" class="btn btn-danger" style="margin: .500em;">';
             /*Конец создания новой строки и ее заполнения*/
 
             /*Начало записи в локальное хранилище*/
+            console.log('dfgdfbdfbdfb');
             var rowNumber = 'row__' + (phonebook.counter - 1);
             var newTrLS = newTr.outerHTML;
+            console.log(newTrLS);
             localStorage.setItem(rowNumber, newTrLS);
             /*Конец записи в локальное хранилище*/
 
@@ -69,9 +63,6 @@ var phonebook = {
             document.getElementById('tbody').onclick = function fn(e) {
                 e = e || event;
                 var target = e.target || e.srcElement;
-                // numTr = target.id.slice(8) /*выбираем номер из id*/ ,
-                // elem = document.getElementById('row__' + +target.id.slice(8)) /*выбираем строку с нужным id*/ ;
-                // console.log(elem);
 
                 tbody.removeChild(document.getElementById('row__' + +target.id.slice(8)));
                 localStorage.removeItem('row__' + +target.id.slice(8));
@@ -106,7 +97,7 @@ var phonebook = {
         } /*заполнение таблицы из localStorage*/ ,
 
         start: function() {
-            console.log(phonebook.arrInputId2);
+            // console.log(phonebook.arrInputId2);
             this.initializer();
             this.EventListener();
             this.listenerTargetAdder();
