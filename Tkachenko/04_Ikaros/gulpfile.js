@@ -12,6 +12,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uncss = require('gulp-uncss');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
+var haml = require('gulp-haml');
 
 /*минимизация html*/
 gulp.task('html', () => {
@@ -22,6 +23,17 @@ gulp.task('html', () => {
         .pipe(rename('index.min.html'))
         .pipe(gulp.dest('dist'))
         .pipe(livereload());
+});
+
+/*создание haml*/
+gulp.task('haml', function () {
+  gulp.src('app/*.haml')
+    .pipe(haml())
+    .pipe(htmlmin({
+        collapseWhitespace: true
+    }))
+    .pipe(rename('index.min.html'))
+        .pipe(gulp.dest('dist'));
 });
 
 /*объединение сторонних css*/
@@ -110,15 +122,15 @@ gulp.task('init', () => {
 gulp.task('watch', () => {
     livereload.listen();
     gulp.watch('app/*.html', ['html', 'vendorCSS']) /*следить за html, запускать html и vendorCSS*/
+    gulp.watch('app/*.haml', ['haml']) /*следить за haml, запускать haml*/
     gulp.watch('app/css/*.min.css', ['vendorCSS']) /*следить за сторонними css, запускать vendorCSS*/
     gulp.watch('app/img/*.png', ['png']) /*следить за изображениями, запускать png*/
     gulp.watch('app/scss/**/*.scss', ['sass']) /*следить за SASS, запускать sass*/
     gulp.watch('app/css/style.css', ['css']) /*следить за style.css, запускать css*/
     gulp.watch('app/scripts/*.js', ['compress']) /*следить за js, запускать compress*/
-
 });
 
 /*BUILD: step1: gulp html sass css compress png  step2: gulp vendorCSS*/
-gulp.task('build', ['html', 'png', 'sass', 'css', 'compress', 'vendorCSS', 'copyfonts'], function() {
+gulp.task('build', ['haml', 'html', 'png', 'sass', 'css', 'compress', 'vendorCSS', 'copyfonts'], function() {
     console.log('Building completed!');
 })
