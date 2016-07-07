@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var gulp = require('gulp');
 var concatCSS = require('gulp-concat-css');
@@ -87,7 +87,7 @@ gulp.task('compress', () => {
 });
 
 /*операции со шрифтами*/
-gulp.task('copyfonts', function() {
+gulp.task('copyfonts', () => {
     gulp.src('app/fonts/*.{ttf,woff,woff2,eot,otf,svg,icon}')
         .pipe(gulp.dest('dist/fonts'));
 });

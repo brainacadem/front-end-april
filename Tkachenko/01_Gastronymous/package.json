@@ -2,7 +2,7 @@
 {
   "name": "Gastronymous",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Tkachenko Artem",
   "license": "free",
   "devDependencies": {
@@ -16,7 +16,7 @@
     "gulp-pngmin": "^0.1.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
-    "gulp-uglify": "^1.5.3",
+    "gulp-uglify": "^1.5.4",
     "gulp-uncss": "^1.0.5"
   }
 }
