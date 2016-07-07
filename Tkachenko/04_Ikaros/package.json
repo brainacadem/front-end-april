@@ -10,6 +10,7 @@
     "gulp-base64-inline": "^1.0.3",
     "gulp-clean-css": "^2.0.9",
     "gulp-concat-css": "^2.3.0",
+    "gulp-haml": "^0.1.6",
     "gulp-htmlmin": "^2.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-pngmin": "^0.1.4",
