@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'allerbold';
   src: url("../fonts/aller_bd-webfont.eot");
@@ -21,7 +22,6 @@
 
 * {
   position: relative;
-  margin: 0 auto;
   box-sizing: border-box;
   color: #555555; }
 
@@ -48,26 +48,21 @@
 h1 {
   font: 1.000em allerbold; }
 
+h2 {
+  font: 1.875em allerbold;
+  color: inherit; }
+
 a {
   color: inherit;
   text-decoration: none;
   cursor: pointer; }
-
-figure {
-  margin: auto; }
-
-ul {
-  padding: 0;
-  list-style: none; }
-
-li {
-  display: inline-block; }
 
 img {
   max-width: 100%; }
 
 .wrapper {
   width: 1500px;
+  margin: 0 auto;
   border: 0.001em solid red; }
 
 #footer,
@@ -109,8 +104,12 @@ main {
   margin: 1.850em auto 1.250em; }
 
 .header__nav {
-  float: right; }
+  float: right;
+  padding: 0;
+  margin: auto;
+  list-style: none; }
   .header__nav li {
+    display: inline-block;
     height: 100%;
     padding-top: 2.700em;
     padding-bottom: 1.250em;
@@ -134,7 +133,65 @@ main {
     color: inherit; }
 
 main {
-  border: .001em solid green; }
+  border: 0.001em solid green; }
+
+.slick {
+  margin-top: 3.100em; }
+  .slick-prev {
+    left: 30px; }
+  .slick-next {
+    right: 30px; }
+  .slick-next, .slick-prev {
+    z-index: 999; }
+    .slick-next::before, .slick-prev::before {
+      font-size: 35px; }
+
+.our_servise {
+  text-align: center;
+  color: #555555; }
+  .our_servise__text {
+    font: 1.25em allerlightr;
+    color: inherit; }
+
+.tabs input {
+  display: none; }
+
+.tabs label {
+  /* Стили вкладок (табов) */
+  display: inline-block;
+  margin: 0 0 -1px;
+  width: 7.000em;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  border-radius: 3px 3px 0 0; }
+
+.tabs label:hover {
+  /* изменения стиля заголовков вкладок при наведении */
+  color: #888;
+  cursor: pointer; }
+
+.tabs input:checked + label {
+  /* стили для активной вкладки */
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 1px solid #009933;
+  border-bottom: 1px solid #fff;
+  background: #fff; }
+
+section {
+  display: none;
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd; }
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block; }
 
 #footer {
   border: .001em solid yellow; }
