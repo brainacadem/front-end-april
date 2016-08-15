@@ -1,6 +1,6 @@
 //main: style.scss
 
-.mainmenu {
+.main_menu {
     height: 3.000em;
     padding: 0.500em;
     background-color: #bfd9f2;
@@ -12,7 +12,7 @@
         padding: 2.200em 12.500em 4.000em;
     }
 
-    &__list__link,
+    &__link,
     &__question {
         font: 1.250em "Lato";
         text-transform: uppercase;
@@ -92,7 +92,7 @@
             }
         }
 
-        &--borderright {
+        &--border_right {
             border-right: 2px solid #aac8e4;
             @include respond(320, 836) {
                 border-right: transparent;
@@ -145,11 +145,11 @@
     }
 }
 
-.nohidden {
+.no_hidden {
     display: block;
 }
 
-.maincontainer {
+.main_container {
     text-align: center;
     @include respond-to(992) {
         padding: 3.300em 1.500em 0;
