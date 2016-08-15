@@ -14,7 +14,7 @@
   }
 }
 
-.headertop {
+.header_top {
   width: 100%;
   padding: 0.500em;
   @include respond(480, 4801) {
@@ -47,10 +47,10 @@
   }
 }
 
-.headerbottom {
+.header_bottom {
   @include respond-to(320) {
     margin-top: 2.000em;
-    }
+  }
 }
 
 .fa-bed:before,
@@ -98,6 +98,9 @@ h2 + ul {
   top: 100px;
   left: 50%;
   margin-left: -130px;
+  @include respond-to(320) {
+    display: none;
+  }
   @include respond(480, 992) {
     top: 80px;
   }
@@ -109,13 +112,13 @@ h2 + ul {
   }
 }
 
-.underh2 {
+.under_h2 {
   &__anchor {
     padding: 0 0.800em;
     font: 0.875em "Lato";
     color: #ffffff;
 
-    &:not(.underh2__anchor--last)::after {
+    &:not(.under_h2__anchor--last)::after {
       content: " - ";
       position: absolute;
       padding: 0 0.600em;
