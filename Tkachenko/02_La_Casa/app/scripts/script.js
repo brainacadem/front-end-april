@@ -34,9 +34,9 @@
     e.preventDefault();
     counter++;
     if ((counter % 2) === 0) {
-      $('main div.mainmenu div.mainmenu__list').removeClass('nohidden');
+      $('main div.main_menu div.main_menu__list').removeClass('no_hidden');
     } else {
-      $('main div.mainmenu div.mainmenu__list').addClass('nohidden');
+      $('main div.main_menu div.main_menu__list').addClass('no_hidden');
       $('html,body').animate({
         scrollTop: $('main').position().top
       }, 700);
@@ -47,32 +47,42 @@
 /*BARS*/
 (function() {
 
-  $(window).resize(function() {
-    if ($(window).width() > 767) {
+  function size() {
+    if ($(window).width() < 767) {
       console.log($(window).width());
-      $('nav.headertop__right').removeClass('headertop__right--bar fa fa-bars');
-      $('ul.bar').removeClass('hidden');
-    } else {
-      $('nav.headertop__right').addClass('headertop__right--bar fa fa-bars');
+      $('nav.header_top__right').addClass('header_top__right--bar fa fa-bars');
       $('ul.bar').addClass('hidden');
+    } else {
+      $('nav.header_top__right').removeClass('header_top__right--bar fa fa-bars');
+      $('nav.header_top__right').removeClass('fa-arrow-right');
+      $('ul.bar').removeClass('hidden');
     }
+  }
 
-    var counter = 0;
-
-    $('.fa-bars').click(function(e) {
-      e.preventDefault();
-      counter++;
-      if ((counter % 2) === 0) {
-        $('ul.bar').removeClass('hidden');
-        $('nav.headertop__right').removeClass('fa-bars');
-        $('nav.headertop__right').addClass('fa-arrow-right');
-      } else {
-        $('ul.bar').addClass('hidden');
-        $('nav.headertop__right').removeClass('fa-arrow-right');
-        $('nav.headertop__right').addClass('fa-bars');
-      }
-    });
+  $(window).resize(function() {
+    size();
   });
 
+  $(window).load(function() {
+    size();
+  });
+
+  var counter = 0;
+
+  $('nav').click(function(e) {
+    e.preventDefault();
+    console.log('!!!!!');
+
+    counter++;
+    if ((counter % 2) === 0) {
+      $('ul.bar').removeClass('hidden');
+      $('nav.header_top__right').removeClass('fa-bars');
+      $('nav.header_top__right').addClass('fa-arrow-right');
+    } else {
+      $('ul.bar').addClass('hidden');
+      $('nav.header_top__right').removeClass('fa-arrow-right');
+      $('nav.header_top__right').addClass('fa-bars');
+    }
+  });
 
 })();

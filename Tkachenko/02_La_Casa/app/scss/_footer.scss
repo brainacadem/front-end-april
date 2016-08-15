@@ -14,7 +14,7 @@
     }
 }
 
-.footermenu {
+.footer_menu {
     display: inline-block;
     width: calc(100%/3);
     @include respond(768, 4801) {
@@ -28,7 +28,7 @@
     }
 }
 
-.aboutussocial {
+.about_us_social {
     vertical-align: top;
     text-align: center;
     @include respond(768, 4801) {
@@ -49,8 +49,8 @@
     }
 }
 
-.aboutus {
-    @extend .footermenu__list;
+.about_us {
+    @extend .footer_menu__list;
     padding-bottom: 1.500em;
     line-height: 2.000em;
     text-align: justify;
