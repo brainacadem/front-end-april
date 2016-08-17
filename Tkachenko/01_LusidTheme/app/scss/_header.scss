@@ -2,6 +2,7 @@
 
 .header {
   &__nav {
+    position: relative;
     padding: 0.150em 0;
     background-color: $brandedcolor;
     text-align: right;
@@ -19,7 +20,20 @@
     }
   }
 
+  &__menu {
+    & > li {
+      display: inline-block;
+      margin-right: 1.700em;
+      & > a {
+        font: 1.000em "Glasgow-Medium";
+        text-shadow: 0.5px 0.5px 0 $lightgray;
+        color: $white;
+      }
+    }
+  }
+
   &__container {
+    position: relative;
     @include respond(0, 992) {
       margin: 1.000em 0;
     }
@@ -31,7 +45,5 @@
 }
 
 .mainmenu--nav {
-  font: 1.000em "Glasgow-Medium";
-  text-shadow: 0.5px 0.5px 0 $lightgray;
-  color: $white;
+
 }
