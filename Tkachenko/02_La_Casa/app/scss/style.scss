@@ -92,7 +92,7 @@ ul {
     list-style: none;
 }
 
-li:not(.footer_menu__list) {
+li {
     display: inline-block;
 }
 
@@ -145,10 +145,10 @@ img {
     opacity: 1;
 }
 
-%clearfloat {
-    content: "";
-    display: block;
-    clear: both;
+%clearfix {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 @import "header";
