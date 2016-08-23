@@ -1,9 +1,7 @@
-import {Service} from './services';
-
+import {Service} from './services.js';
 
 export class Person {
-    constructor() {
-        this._name = 'Vlad';
+    constructor() {     
         this.service = new Service();
     }
 
@@ -11,6 +9,4 @@ export class Person {
     getAllPersons() {
         return this.service.getAllPersons();
     }
-
-
 }

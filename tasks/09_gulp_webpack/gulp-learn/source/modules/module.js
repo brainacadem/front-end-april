@@ -1,6 +1,6 @@
 (function() {
    function Module() {
-       this.name = 'Hello';
+       this.name = 'Privet';
    }
 
 
@@ -9,5 +9,5 @@
    };
 
    window.Modules = window.Modules || {};
-   window.Modules = new Module()
+   window.Modules = new Module();
 })();
