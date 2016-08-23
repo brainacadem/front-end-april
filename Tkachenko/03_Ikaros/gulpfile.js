@@ -13,6 +13,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
 var haml = require('gulp-haml');
+var spritesmith = require('gulp.spritesmith');
 
 /*минимизация html*/
 gulp.task('html', () => {
@@ -33,7 +34,8 @@ gulp.task('haml', function () {
         collapseWhitespace: true
     }))
     .pipe(rename('index.min.html'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'))
+        .pipe(livereload());
 });
 
 /*объединение сторонних css*/
@@ -102,6 +104,25 @@ gulp.task('compress', () => {
 gulp.task('copyfonts', function() {
     gulp.src('app/fonts/*.{ttf,woff,woff2,eot,otf,svg,icon}')
         .pipe(gulp.dest('dist/fonts'));
+});
+
+/*создание спрайта*/
+gulp.task('sprite', function() {
+    var spriteData =
+        gulp.src('app/img/sprite/*.png') // путь, откуда берем картинки для спрайта
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: '_sprite.scss',
+                cssFormat: 'scss',
+                algorithm: 'left-right',
+                cssTemplate: 'cssTemplate.scss',
+                cssVarMap: function(sprite) {
+                    sprite.name = 'sprite_' + sprite.name;
+                }
+            }));
+
+    spriteData.img.pipe(gulp.dest('dist/img')); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('app/scss')); // путь, куда сохраняем стили
 });
 
 /*инициализация*/
