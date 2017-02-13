@@ -1,63 +1,65 @@
 // main: style.scss
 
 #footer {
-    padding: 0.500em;
-    background-color: #95badf;
-    @include respond(768, 1200) {
-        padding: 2.500em;
-    }
-    @include respond-to(992) {
-        margin-bottom: 2.000em;
-    }
-    @include respond-to(1200) {
-        padding: 6.000em 12.500em 0;
-    }
+  padding: 0.500em;
+  background-color: #95badf;
+  @include respond(768, 1200) {
+    padding: 2.500em;
+  }
+  @include respond-to(992) {
+    margin-bottom: 2.000em;
+  }
+  @include respond-to(1200) {
+    padding: 6.000em 12.500em 0;
+  }
 }
 
-.footermenu {
+.footer_menu {
+  display: inline-block;
+  width: calc(100%/3);
+  @include respond(768, 4801) {
+    width: calc(70%/3);
+  }
+
+  li {
+    display: block;
+    padding-bottom: 1.100em;
+    font: 1.000em "Lato";
+    color: #ffffff;
+  }
+}
+
+.about_us_social {
+  vertical-align: top;
+  text-align: center;
+  @include respond(768, 4801) {
+    width: 30%;
     display: inline-block;
-    width: calc(100%/3);
-    @include respond(768, 4801) {
-        width: calc(70%/3);
-    }
+    text-align: left;
+  }
 
-    &__list {
-        padding-bottom: 1.100em;
-        font: 1.000em "Lato";
-        color: #ffffff;
+  .fa {
+    &-facebook,
+    &-git,
+    &-skype,
+    &-twitter {
+      margin-right: 1.200em;
+      font-size: 1.100em;
+      color: #ffffff;
     }
+  }
 }
 
-.aboutussocial {
-    vertical-align: top;
-    text-align: center;
-    @include respond(768, 4801) {
-        width: 30%;
-        display: inline-block;
-        text-align: left;
-    }
-
-    .fa {
-        &-facebook,
-        &-git,
-        &-skype,
-        &-twitter {
-            margin-right: 1.200em;
-            font-size: 1.100em;
-            color: #ffffff;
-        }
-    }
-}
-
-.aboutus {
-    @extend .footermenu__list;
-    padding-bottom: 1.500em;
-    line-height: 2.000em;
-    text-align: justify;
+.about_us {
+  padding-bottom: 1.500em;
+  line-height: 2.000em;
+  text-align: justify;
+  font: 1.000em "Lato";
+  color: #ffffff;
 }
 
 h4 {
-    a {
-        font-weight: bold;
-    }
+  a {
+    font-weight: bold;
+  }
 }

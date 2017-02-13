@@ -80,7 +80,7 @@ ul {
   padding: 0;
   list-style: none; }
 
-li:not(.footermenu__list):not(.aboutus) {
+li {
   display: inline-block; }
 
 img {
@@ -97,6 +97,9 @@ img {
 
 .fa-arrow-right:before {
   content: "\f061"; }
+
+.fa-bars:before {
+  content: "\f0c9"; }
 
 #back-to-top {
   position: fixed;
@@ -121,6 +124,11 @@ img {
 #back-to-top.show {
   opacity: 1; }
 
+.header_top::after {
+  content: "";
+  display: table;
+  clear: both; }
+
 #header {
   padding: 0.500em 2.500em 0;
   background-color: #dadada; }
@@ -134,28 +142,28 @@ img {
     #header {
       padding: 6.250em 12.500em 23.125em; } }
 
-.headertop {
+.header_top {
   width: 100%;
   padding: 0.500em; }
   @media only screen and (min-width: 480px) and (max-width: 4800px) {
-    .headertop {
+    .header_top {
       position: absolute;
       top: 0;
       left: 0;
       background-color: rgba(180, 185, 191, 0.45); } }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .headertop {
+    .header_top {
       padding: 1.414em 4.500em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    .headertop {
+    .header_top {
       padding: 1.414em 12.500em 0; } }
-  .headertop__left {
+  .header_top__left {
     float: left; }
-  .headertop__right {
+  .header_top__right {
     float: right; }
 
 @media only screen and (min-width: 0px) and (max-width: 479px) {
-  .headerbottom {
+  .header_bottom {
     margin-top: 2.000em; } }
 
 .fa-bed:before,
@@ -175,64 +183,66 @@ img {
     font-size: 2.000em;
     color: white; }
 
-.navigation {
+.bar > li {
   width: 6.250em;
   vertical-align: middle;
   text-align: center;
   line-height: 2.500em;
   color: #ffffff; }
-  .navigation:hover {
+  .bar > li:hover {
     outline: #ffffff solid 2px;
     transition: 0.5s;
     -moz-outline-radius: 2px; }
-  .navigation span {
+  .bar > li span {
     font: 1.000em "Lato"; }
 
-h2 + ul {
+.motto {
   position: absolute;
   display: block;
   width: 260px;
   top: 100px;
   left: 50%;
   margin-left: -130px; }
+  @media only screen and (min-width: 0px) and (max-width: 479px) {
+    .motto {
+      display: none; } }
   @media only screen and (min-width: 480px) and (max-width: 991px) {
-    h2 + ul {
+    .motto {
       top: 80px; } }
   @media only screen and (min-width: 992px) and (max-width: 1254px) {
-    h2 + ul {
+    .motto {
       top: 200px; } }
   @media only screen and (min-width: 1255px) and (max-width: 4800px) {
-    h2 + ul {
+    .motto {
       top: 100px; } }
+  .motto a {
+    padding: 0 0.800em;
+    font: 0.875em "Lato";
+    color: #ffffff; }
+    .motto a:not(.j)::after {
+      content: " - ";
+      position: absolute;
+      padding: 0 0.600em; }
 
-.underh2__anchor {
-  padding: 0 0.800em;
-  font: 0.875em "Lato";
-  color: #ffffff; }
-  .underh2__anchor:not(.underh2__anchor--last)::after {
-    content: " - ";
-    position: absolute;
-    padding: 0 0.600em; }
-
-.mainmenu {
+.main_menu {
   height: 3.000em;
   padding: 0.500em;
   background-color: #bfd9f2;
   letter-spacing: 0.100em; }
   @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .mainmenu {
+    .main_menu {
       padding: 0.500em 2.500em; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    .mainmenu {
+    .main_menu {
       padding: 2.200em 12.500em 4.000em; } }
-  .mainmenu__list__link, .mainmenu__question {
+  .main_menu__link, .main_menu__question {
     font: 1.250em "Lato";
     text-transform: uppercase;
     color: #95badf; }
-  .mainmenu__question {
+  .main_menu__question {
     float: left;
     margin-top: 0.2em; }
-  .mainmenu__list {
+  .main_menu__list {
     width: 100%;
     position: absolute;
     top: 99px;
@@ -243,21 +253,21 @@ h2 + ul {
     background-color: #cbe0f4;
     border: 1px solid #aac8e4; }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-      .mainmenu__list {
+      .main_menu__list {
         top: 36px;
         padding: 1.000em;
         text-align: center; } }
     @media only screen and (min-width: 768px) and (max-width: 1199px) {
-      .mainmenu__list {
+      .main_menu__list {
         top: 42px; } }
-    .mainmenu__list:after, .mainmenu__list:before {
+    .main_menu__list:after, .main_menu__list:before {
       content: "";
       position: absolute;
       right: 2.500em; }
       @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-        .mainmenu__list:after, .mainmenu__list:before {
+        .main_menu__list:after, .main_menu__list:before {
           right: 12.500em; } }
-    .mainmenu__list:before {
+    .main_menu__list:before {
       top: -16px;
       z-index: 2;
       height: 0;
@@ -266,19 +276,19 @@ h2 + ul {
       border-left: 0.75em solid transparent;
       border-right: 0.75em solid transparent; }
       @media only screen and (min-width: 320px) and (max-width: 767px) {
-        .mainmenu__list:before {
+        .main_menu__list:before {
           top: -9px; } }
       @media only screen and (min-width: 768px) and (max-width: 1199px) {
-        .mainmenu__list:before {
+        .main_menu__list:before {
           top: -10px; } }
       @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-        .mainmenu__list:before {
+        .main_menu__list:before {
           height: 0;
           width: 0;
           border-bottom: 1em solid #cbe0f4;
           border-left: 1em solid transparent;
           border-right: 1em solid transparent; } }
-    .mainmenu__list:after {
+    .main_menu__list:after {
       top: -17px;
       z-index: 1;
       height: 0;
@@ -287,77 +297,77 @@ h2 + ul {
       border-left: 0.75em solid transparent;
       border-right: 0.75em solid transparent; }
       @media only screen and (min-width: 320px) and (max-width: 767px) {
-        .mainmenu__list:after {
+        .main_menu__list:after {
           top: -10px; } }
       @media only screen and (min-width: 768px) and (max-width: 1199px) {
-        .mainmenu__list:after {
+        .main_menu__list:after {
           top: -11px; } }
       @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-        .mainmenu__list:after {
+        .main_menu__list:after {
           height: 0;
           width: 0;
           border-bottom: 1em solid #aac8e4;
           border-left: 1em solid transparent;
           border-right: 1em solid transparent; } }
-    .mainmenu__list__link {
+    .main_menu__list__link {
       padding-left: 0.400em;
       line-height: 86.5px; }
       @media only screen and (min-width: 320px) and (max-width: 835px) {
-        .mainmenu__list__link {
+        .main_menu__list__link {
           line-height: 1.250em; } }
-    .mainmenu__list--borderright {
+    .main_menu__list--border_right {
       border-right: 2px solid #aac8e4; }
       @media only screen and (min-width: 320px) and (max-width: 835px) {
-        .mainmenu__list--borderright {
+        .main_menu__list--border_right {
           border-right: transparent; } }
-    .mainmenu__list hr {
+    .main_menu__list hr {
       width: 100%;
       margin: 1.900em auto;
       border: 0;
       border-bottom: 2px solid #aac8e4; }
       @media only screen and (min-width: 320px) and (max-width: 835px) {
-        .mainmenu__list hr {
+        .main_menu__list hr {
           display: none; } }
-  .mainmenu li {
+  .main_menu li {
     width: 47%;
     padding-right: 4.500em;
     margin-right: 2.000em; }
     @media only screen and (min-width: 320px) and (max-width: 835px) {
-      .mainmenu li {
+      .main_menu li {
         width: 100%;
         padding: 1.000em;
         margin-right: auto; } }
     @media only screen and (min-width: 835px) and (max-width: 1402px) {
-      .mainmenu li {
+      .main_menu li {
         width: 45%; } }
-    .mainmenu li i {
+    .main_menu li i {
       float: right;
       top: 1.500em;
       font: normal normal normal 1.250em/1 FontAwesome;
       color: #95badf; }
-  .mainmenu .fa-cog {
+  .main_menu .fa-cog {
     float: right;
     color: #a1c4e6;
     cursor: pointer; }
   @media only screen and (min-width: 320px) and (max-width: 835px) {
-    .mainmenu .fa-calendar-check-o {
+    .main_menu .fa-calendar-check-o {
       display: none; } }
 
-.nohidden {
+.no_hidden {
   display: block; }
 
-.maincontainer {
+.main_container {
   text-align: center; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .maincontainer {
+    .main_container {
       padding: 3.300em 1.500em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    .maincontainer {
+    .main_container {
       padding-top: 6.300em;
       padding-left: 12.500em;
       padding-right: calc(12.500em - 40px); } }
   @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-    .maincontainer {
+    .main_container {
       padding-left: 1.500em;
       padding-right: calc(1.500em - 40px); } }
 
@@ -376,7 +386,7 @@ h2 + ul {
     .figure__top {
       height: 230px;
       overflow: hidden; } }
-  .figure__top__price {
+  .figure__price {
     position: absolute;
     top: 0.500em;
     left: 0.700em;
@@ -437,34 +447,37 @@ input[type=button] {
     #footer {
       padding: 6.000em 12.500em 0; } }
 
-.footermenu {
+.footer_menu {
   display: inline-block;
   width: calc(100%/3); }
   @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    .footermenu {
+    .footer_menu {
       width: calc(70%/3); } }
-  .footermenu__list, .aboutus {
+  .footer_menu li {
+    display: block;
     padding-bottom: 1.100em;
     font: 1.000em "Lato";
     color: #ffffff; }
 
-.aboutussocial {
+.about_us_social {
   vertical-align: top;
   text-align: center; }
   @media only screen and (min-width: 768px) and (max-width: 4800px) {
-    .aboutussocial {
+    .about_us_social {
       width: 30%;
       display: inline-block;
       text-align: left; } }
-  .aboutussocial .fa-facebook, .aboutussocial .fa-git, .aboutussocial .fa-skype, .aboutussocial .fa-twitter {
+  .about_us_social .fa-facebook, .about_us_social .fa-git, .about_us_social .fa-skype, .about_us_social .fa-twitter {
     margin-right: 1.200em;
     font-size: 1.100em;
     color: #ffffff; }
 
-.aboutus {
+.about_us {
   padding-bottom: 1.500em;
   line-height: 2.000em;
-  text-align: justify; }
+  text-align: justify;
+  font: 1.000em "Lato";
+  color: #ffffff; }
 
 h4 a {
   font-weight: bold; }
